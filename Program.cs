@@ -121,4 +121,20 @@ var result = historicalFish switch
 Console.WriteLine("This is a " +result);
 
 
-//for loops
+//loops
+
+//Pinger
+using System.Net.NetworkingInformation
+
+Ping p1 = new Ping();
+PingReply PR = p1.Send("8.8.8.8");
+
+while(PR.status.ToString()== "Success")
+{
+    Console.WriteLine(PR.Status.ToString() 
+    + "|");
+    PR = p1.Send("8.8.8.8");
+    Console.WriteLine(Waiting ten seconds for next request);
+    Thread.Sleep(10000);
+    
+}

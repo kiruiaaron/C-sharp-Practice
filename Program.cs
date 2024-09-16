@@ -136,5 +136,60 @@ while(PR.status.ToString()== "Success")
     PR = p1.Send("8.8.8.8");
     Console.WriteLine(Waiting ten seconds for next request);
     Thread.Sleep(10000);
-    
+
 }
+
+//CRUD
+
+Rat wolfRat = new Rat();
+
+wolfRat.Name = "Wolf Rat";
+wolfRat.Number = 1000;
+wolfRat.IsRadioactive = false;
+
+//READ
+
+Console.WriteLine(wolfRat.Name);
+
+
+//Update
+
+wolfRat.Name = "WOLF RAT";
+
+Console.WriteLine(wolfRat.Name);
+
+//Delete
+wolfRat.Name = "";
+
+Console.WriteLine(wolfRat.Name);
+
+//TUPPLE
+
+RealEstate elmStreet = new()
+{
+    Address = "Elm Street",
+    SquareFootage = 1300,
+    Price = 30000
+};
+
+Console.WriteLine(elmStreet.CalculatePricePerSquareFoot());
+
+var values = ("t", 2, "p");
+
+Console.WriteLine(values.Item1);
+Console.WriteLine(values.Item2);
+Console.WriteLine(values.Item3);
+
+
+var valuesWithName = (First: "t", Second:2, Third:"p");
+
+Console.WriteLine(valuesWithName.First);
+
+(int a, string b, bool c) ReturnTheseValues()
+{
+    return (9, "u",true);
+}
+
+var tupleReturnValue = ReturnTheseValues();
+Console.WriteLine(tupleReturnValue.0);
+

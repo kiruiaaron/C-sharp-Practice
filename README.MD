@@ -11,3 +11,6 @@ Operators
 Enum
 Switch Case, switch expression
 Loops, Pinger
+Tuple
+Null Reference exception
+Constructors

@@ -193,3 +193,31 @@ Console.WriteLine(valuesWithName.First);
 var tupleReturnValue = ReturnTheseValues();
 Console.WriteLine(tupleReturnValue.0);
 
+
+//Null Reference Exception
+int? value = null;
+
+string? value2 = null;
+
+Console.WriteLine(value2?.Length);
+
+
+if (value2 is not null)
+{
+    Console.WriteLine(value2.Length);
+}
+
+Console.WriteLine(value2 ?? "No value!");
+Console.WriteLine(value2 is not null ? "Has value!" : "No value");
+
+//Constructor
+
+//Syntax
+public class RealEstate
+{
+    public RealEstate()
+    {
+        Console.WriteLine("I run FIRST");
+    }
+}
+
